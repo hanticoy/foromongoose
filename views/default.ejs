@@ -26,7 +26,7 @@
                         <td><input type="hidden" name="title" id="title" value="Mi titulo"></td>
                     </tr>
                     <tr>
-                        <td colspan="2"><input class="campo" type="text" name="name" id="name"></td>
+                        <td colspan="2"><input class="campo" type="text" name="name" id="name" required></td>
                     </tr>
                     <tr>
                         <td>Mansaje</td>
@@ -34,7 +34,7 @@
                     </tr>
                     <tr>
                         <td colspan="2">
-                            <textarea name="content" id="content" cols="86" rows="10"></textarea>
+                            <textarea name="content" id="content" cols="86" rows="10" required></textarea>
                         </td>
                     </tr>
                 </table>
@@ -102,14 +102,14 @@
                                         <td><input type="hidden" name="title" id="title" value="new title"></td>
                                     </tr>
                                     <tr>
-                                        <td colspan="2"><input class="campo" type="text" name="name" id="name"></td>
+                                        <td colspan="2"><input class="campo" type="text" name="name" id="name" required></td>
                                     </tr>
                                     <tr>
                                         <td>Mansaje</td>
                                         <td></td>
                                     </tr>
                                     <tr valign="bottom">
-                                        <td><textarea name="content" id="content" cols="86" rows="5"></textarea></td>
+                                        <td><textarea name="content" id="content" cols="86" rows="5" required></textarea></td>
                                         <td><button onclick="navegar('<%= usuarios[u]._id %>','<%=blogid%>');" id="btnOtroMsg">Post Message!</button></td>
                                     </tr>
                                 </table>
