@@ -1,0 +1,126 @@
+* {
+  margin: 0px;
+  padding-top: 5px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+  border-bottom: 5px solid black;
+  margin-bottom: 10px;
+}
+.contenedor {
+  border: 2px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 50%;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.contenedor2 {
+  border: 2px solid black;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 90%;
+  margin: 10px;
+  padding-left: 20px;
+}
+
+.linea {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.linea2 {
+  /* border: 2px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 100%;
+  margin: 5px;
+}
+
+.lineabtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: nowrap;
+  width: 86%;
+  padding-bottom: 10px;
+}
+
+.Datos {
+  padding: 5px;
+  width: 700px;
+}
+.Datos2 {
+  width: 98%;
+}
+.campo {
+  width: 480px;
+}
+
+.titulo {
+  color: dimgray;
+}
+
+.detail {
+  color: blue;
+  text-align: right;
+}
+
+/* Button */
+.button, button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 2px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #1976d2;
+  color: white;
+  border: none;
+  height: 50px;
+  width: 200px;
+}
+
+.button:hover, button:hover {
+  opacity: 0.8;
+  font-weight: normal;
+}
+
+.button:disabled, button:disabled {
+  opacity: 0.5;
+  cursor: auto;
+}
+
+.editar {
+  width: 30px;
+  height: 30px;
+  cursor: hand;
+}
+
+a {
+  cursor: pointer;
+  color: #1976d2;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <form id="formulario">
+        <header>
+            <h1>The Dojo Message Board</h1>
+        </header>
+
+        <main class="contenedor">
+
+            <article class="linea">
+
+                <table class="Datos">
+                    <tr>
+                        <td>Nombre</td>
+                        <td><input type="hidden" name="title" id="title" value="Mi titulo"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input class="campo" type="text" name="name" id="name"></td>
+                    </tr>
+                    <tr>
+                        <td>Mansaje</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <textarea name="content" id="content" cols="86" rows="10"></textarea>
+                        </td>
+                    </tr>
+                </table>
+
+            </article>
+            <article>
+                <% for (var x in errores) { %>
+                    <h4>
+                        <%= errores[x] %>
+                    </h4>
+                    <% } %>
+            </article>
+            <article class="lineabtn">
+                <div><button id="btnSendMsg">Post Message!</button></div>
+            </article>
+
+        </main>
+    </form>
+    
+        <main class="contenedor2">
+           
+            <article class="linea2">
+
+                <table class="Datos2">
+                    <% for (var u in usuarios) { %>
+                    <tr>
+                        <td>id</td>
+                        <td colspan="5"><%= usuarios[u]._id %></td>
+                    </tr>    
+                    <tr>
+                        <td>Nombre</td>
+                        <td colspan="5"><%= usuarios[u].name %></td>
+                    </tr>
+                        <% 
+                        blogid = usuarios[u].blogs._id
+                        blog = usuarios[u].blogs
+                        for (var b in blog) { %>
+                        <tr>
+                            <td></td>
+                            <td>blogs.Titulo</td>
+                            <td colspan="4"><%= blog[b].title %></td>
+                        </tr>
+                            <% 
+                            post = blog[b].posts
+                            for (var p in post) { %>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>posts.Titulo</td>
+                                <td colspan="3"><%= post[p].title %></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2"></td>
+                                <td>posts.content</td>
+                                <td><%= post[p].content %></td>
+                            </tr>
+                            <% } %>
+                        <% } %>
+
+                        <tr>
+                            <td colspan="6">
+                                <form id="formulario2">
+                                <table class="Datos">
+                                    <tr>
+                                        <td>Nombre</td>
+                                        <td><input type="hidden" name="title" id="title" value="new title"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2"><input class="campo" type="text" name="name" id="name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Mansaje</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr valign="bottom">
+                                        <td><textarea name="content" id="content" cols="86" rows="5"></textarea></td>
+                                        <td><button onclick="navegar('<%= usuarios[u]._id %>','<%=blogid%>');" id="btnOtroMsg">Post Message!</button></td>
+                                    </tr>
+                                </table>
+                                </form>
+                            </td>
+                        </tr>
+                        <tr><td colspan="6"><br></td></tr>
+
+                    <% } %>
+                </table>
+
+            </article>
+        </main>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
